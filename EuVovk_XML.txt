@@ -1,0 +1,182 @@
+XML
+ 01. Создать внешний репозиторий c названием XML.
+ 02. Клонировать репозиторий XML на локальный компьютер.
+	- git clone https://github.com/EugeneVovk/XML.git
+ 03. Внутри локального XML создать файл “new.xml”.
+	- touch XML/new.xml
+ 04. Добавить файл под гит.
+	- cd XML
+	- git status
+	- git add new.xml
+ 05. Закоммитить файл.
+	- git commit -m "add new.xml"
+ 06. Отправить файл на внешний GitHub репозиторий.
+	- git pull
+	- git push
+ 07. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
+	- nano new.xml
+		<?xml version="1.0" encoding="utf-8"?>
+		<root>
+			<fio>
+				<last_name>Vovk</last_name>
+				<first_name>Eugene</first_name>
+				<patronymic>Nikolaevich</patronymic>
+			</fio>
+			<age>39</age>
+			<number_of_pets>0</number_of_pets>
+			<salary>1500</salary>
+		</root>
+
+	ctrl+o
+	ctrl+x
+ 08. Отправить изменения на внешний репозиторий.
+	- git status
+	- git diff
+	- git add new.xml
+	- git commit -m "add a data in new.xml"
+	- git pull
+	- git push
+ 09. Создать файл preferences.xml
+	- touch preferences.xml
+ 10. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
+	- nano preferences.xml
+		<?xml version="1.0" encoding="utf-8"?>
+		<favorite>
+			<movie>Interstate 60"</movie>
+			<series>Love, Death & Robots</series>
+			<food>Charcoal Chicken</food>
+			<season>summer</season>
+			<country>USA</country>
+		</favorite>
+	ctrl+o
+	ctrl+x
+ 11. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+	- nano skills.xml
+		<?xml version="1.0" encoding="UTF-8"?>
+		<!-- скиллы которые будут изучены на курсе https://ksendzov.com/ -->
+			<skills>
+			<skill id="1" type="basic testing theory">true</skill>
+			<skill id="2" type="HTTP">
+					<knowledge>methods</knowledge>
+					<knowledge>requests</knowledge>
+					<knowledge>responses</knowledge>
+					<knowledge>status codes</knowledge>
+			</skill>
+			<skill type="basics">
+					<knowledge>JSON</knowledge>
+					<knowledge>XML</knowledge>
+			</skill>
+			<skill id="3" type="API testing">
+					<tool>Postman</tool>
+			</skill>
+			<skill id="4" type="logs">
+					<knowledge>capturing from an external server</knowledge>
+					<knowledge>reading from an external server</knowledge>
+			</skill>
+			<skill id="5" class="http web traffic" type="sniffing">
+					<tool>Charles</tool>
+					<tool>Fiddler</tool>
+			</skill>
+			<skill id="6" type="DevTools">
+					<browser>Google Chrome</browser>
+					<browser>FireFox</browser>
+			</skill>
+			<skill id="7" type="VPN">
+					<knowledge>how it works</knowledge>
+					<knowledge>why we need it</knowledge>
+					<knowledge>how to use</knowledge>
+					<knowledge>tool options</knowledge>
+			</skill>
+			<skill id="8" type="mobile testing" class="guidlines">
+					<os>iOS</os>
+					<os>Android</os>
+			</skill>
+			<skill id="9" type="building apps">
+					<os>iOS</os>
+					<tool>XCode</tool>
+			</skill>
+			<skill id="10" type="building apps">
+					<os>Android</os>
+					<tool>Android Studio</tool>
+			</skill>
+		<!-- самозакрывающийся тег -->
+			<skill id="11" type="Android device management" />
+			<skill id="12" type="setting up proxies and VPN">
+					<os>iOS</os>
+					<os>Android</os>
+			</skill>
+			<skill id="13" class="mobile traffic" type="sniffing">
+					<tool>Charles</tool>
+					<tool>Fiddler</tool>
+			</skill>
+			<skill id="14" type="Linux command line">
+					<action>copy file on servers</action>
+					<action>create file on servers</action>
+					<action>view file on servers</action>
+					<action>move file on servers</action>
+			</skill>
+			<skill id="15" type="basics">
+					<knowledge>basic bash scripting</knowledge>
+					<knowledge>automation of routine tasks on the server</knowledge>
+			</skill>
+			<skill id="16">remote server access</skill>
+			<skill id="17" type="SQL basics">
+					<keyword>Create</keyword>
+					<keyword>Delete</keyword>
+					<keyword>Drop</keyword>
+					<keyword>Insert Into</keyword>
+					<keyword>dSelect</keyword>
+					<keyword>From</keyword>
+					<keyword>Where</keyword>
+					<keyword>Join</keyword>
+			</skill>
+			<skill id="18" type="Postgres database">
+					<action>installation</action>
+					<action>setup</action>
+					<action>use</action>
+			</skill>
+			<skill id="18" type="non-relational Redis database">
+					<action>installation</action>
+					<action>setup</action>
+					<action>use</action>
+			</skill>
+			<skill id="19" type="load testing">
+					<tool>Jmeter</tool>
+			</skill>
+			<skill id="20" type="development methodology">
+					<knowledge>Scrum</knowledge>
+	ctrl+o
+	ctrl+x
+ 12. Сделать коммит в одну строку.
+	- git add . && git commit -m "add preferences.xml and skills.xml"
+ 13. Отправить сразу 2 файла на внешний репозиторий.
+	- git push
+ 14. На веб интерфейсе создать файл bug_report.xml.
+ 15. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 16. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
+	<?xml version="1.0" encoding="UTF-8"?>
+	<!-- Bug template -->
+	<Bug_id>номер</Bug_id>
+	<Tit1e>заголовок</Tit1e>
+	<Severity>
+			<type>Blocker</type>
+			<type>Critical</type>
+			<type>Major</type>
+			<type>Minor</type>
+			<type>Trivial</type>
+	</Severity>
+	<Priority>
+			<type>High</type>
+			<type>Medium</type>
+			<type>Low</type>
+	</Priority>
+	<Environment>окужение, где был обнаружен дефект(баг)</Environment>
+	<Precondition>предусловие</Precondition>
+	<STR>шаги воспроизведения дефекта(бага)</STR>	
+	<AR>фактический результат</AR>
+	<ER>ожидаемый результат</ER>	
+	<Attachments>скриншот, видео</Attachments>
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 18. Синхронизировать внешний и локальный репозиторий XML
+	- git fetch
+	- git pull
